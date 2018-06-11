@@ -1,0 +1,4 @@
+<!--Fragments are light weight UI parts which can be reused-->
+<core:FragmentDefinition xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core">
+	<Text text="I belong to Fragment"/>
+</core:FragmentDefinition>

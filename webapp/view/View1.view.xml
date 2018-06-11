@@ -1,0 +1,49 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"  xmlns:core="sap.ui.core"
+	controllerName="com.ibmidocdashboard.controller.View1" displayBlock="true">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<core:Fragment fragmentName="com.ibmidocdashboard.view.fragments.simple" type="XML"/>
+					<Button
+				text="Show Popover"
+				press="handlePopoverPress" />
+					<Input width="100%" id="__input0"/>
+					<Button text="Filter" press="onFilter"/>
+					<Table id="idocList" items="{ path: '/idoc' }">
+						<!--sorter: {path: 'status', group: true},-->
+						<!--filters: [-->
+						<!--{path: 'status', operator: 'EQ', value1: '51'}-->
+						<!--]-->
+						<columns>
+							<Column id="__column0">
+								<header>
+									<Label id="__label0" text="Partnerr"/>
+								</header>
+							</Column>
+							<Column id="__column1">
+								<header>
+									<Label id="__label1" text="IDOC Number"/>
+								</header>
+							</Column>
+							<Column demandPopin="true" id="__column2" minScreenWidth="Desktop">
+								<header>
+									<Label id="__label2" text="Status"/>
+								</header>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem counter="0" id="__itemList" vAlign="Middle">
+								<cells>
+									<Text id="__text0" maxLines="0" text="{partner}"/>
+									<Text id="__text1" maxLines="0" text="{idocnumber}"/>
+									<Text id="__text2" maxLines="0" text="{status}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
